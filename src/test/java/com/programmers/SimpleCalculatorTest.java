@@ -39,4 +39,28 @@ public class SimpleCalculatorTest {
 
         assertThat(rs).isEqualTo(5);
     }
+    @Test //아래의 테스트가 독립적으로 실행이 가능하다.
+    @DisplayName("2 * 5 = 10") //설명
+    public void t5() {
+        SimpleCalculator simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.multiply(2, 5);
+
+        assertThat(rs).isEqualTo(10);
+    }
+    @Test //아래의 테스트가 독립적으로 실행이 가능하다.
+    @DisplayName("20 / 5 = 4") //설명
+    public void t6() {
+        SimpleCalculator simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.divide(20, 5);
+
+        assertThat(rs).isEqualTo(4);
+    }
+    @Test //아래의 테스트가 독립적으로 실행이 가능하다.
+    @DisplayName("15 % 3 = 0") //설명
+    public void t7() {
+        SimpleCalculator simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.reminder(15, 3);
+
+        assertThat(rs).isEqualTo(0);
+    }
 }
