@@ -22,4 +22,12 @@ public class SimpleCalculatorTest {
 
         assertEquals(12, rs); //expected, actual을 매개변수로 받는다.
     }
+    @Test //아래의 테스트가 독립적으로 실행이 가능하다.
+    @DisplayName("20 + 10 = 30") //설명
+    public void t3() {
+        SimpleCalculator simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.plus(20, 10);
+
+        assertEquals(30, rs); //expected, actual을 매개변수로 받는다.
+    }
 }
