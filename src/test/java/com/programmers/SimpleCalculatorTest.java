@@ -63,4 +63,20 @@ public class SimpleCalculatorTest {
 
         assertThat(rs).isEqualTo(0);
     }
+    @Test //아래의 테스트가 독립적으로 실행이 가능하다.
+    @DisplayName("2 / 0 = 0") //설명
+    public void t8() {
+        SimpleCalculator simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.divide(2, 0); //ArithmeticException 에러 처리 필요함
+
+        assertThat(rs).isEqualTo(0);
+    }
+    @Test //아래의 테스트가 독립적으로 실행이 가능하다.
+    @DisplayName("2 % 0 = 0") //설명
+    public void t9() {
+        SimpleCalculator simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.reminder(2, 0); //ArithmeticException 에러 처리 필요함
+
+        assertThat(rs).isEqualTo(0);
+    }
 }
